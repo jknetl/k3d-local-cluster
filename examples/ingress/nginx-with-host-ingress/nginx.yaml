@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-host-ingress
+  labels:
+    app: nginx-host-ingress
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-host-ingress
+  template:
+    metadata:
+      labels:
+        app: nginx-host-ingress
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80
