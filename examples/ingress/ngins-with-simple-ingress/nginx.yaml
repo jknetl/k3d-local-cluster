@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-simple-ingress
+  labels:
+    app: nginx-simple-ingress
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-simple-ingress
+  template:
+    metadata:
+      labels:
+        app: nginx-simple-ingress
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80
