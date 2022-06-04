@@ -29,5 +29,5 @@ Now its installed, you can configure credentials:
 ```
   server.insecure: "true"
 ```
-2. Apply ingress.yaml
+2. Apply ingressroute.yaml
 
