@@ -25,10 +25,9 @@ Now its installed, you can configure credentials:
 
 ## Configure ingress
 
-1. To argocd-cmd-params-cm ConfigMap add following keys:
+1. To argocd-cmd-params-cm ConfigMap add following key:
 ```
   server.insecure: "true"
-  server.rootpath: /argocd
 ```
 2. Apply ingress.yaml
 

@@ -6,9 +6,10 @@ metadata:
     ingress.kubernetes.io/ssl-redirect: "false"
 spec:
   rules:
-  - http:
+  - host: argo.127.0.0.1.nip.io
+    http:
       paths:
-      - path: /argocd
+      - path: /
         pathType: Prefix
         backend:
           service:
