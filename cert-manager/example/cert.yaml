@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: knetl-net
+  namespace: cert-manager
+spec:
+  secretName: knetl-net-tls
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: knetl.net
+  dnsNames:
+  - "*.knetl.net"
